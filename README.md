@@ -9,7 +9,7 @@ image --> pre-process --> Face Detection model --> SVM Classifier --> Detected f
 
 Final output --> Detected Face output + Detected emotion output.
 
-Paper:We have also included our research paper on this topic in this repository. Please do read it to fing out more details.
+Paper:We have also included our academic research paper on this topic in this repository. Please do read it to fing out more details.
 
 Data:
 1)The 5 celebrity dataset used for Face Recognition Model is zipped and uploaded in this repository. You can also download it from https://www.kaggle.com/dansbecker/5-celebrity-faces-dataset
