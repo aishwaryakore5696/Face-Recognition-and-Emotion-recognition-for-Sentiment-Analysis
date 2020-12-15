@@ -24,7 +24,8 @@ VGG Face - Resnet 50 - Emotion Detection Keras has a VGGFace library that provid
 
 Given an image, it goes through the following steps in our system.
 
-![alt text](https://github.com/aishwaryakore5696/Face-Recognition-and-Emotion-recognition-for-Sentiment-Analysis/blob/master/flow.png?raw=true)
+![alt text](https://github.com/aishwaryakore5696/Face-Recognition-and-Emotion-recognition-for-Sentiment-Analysis/blob/main/flow.png)
+
 
 We input an image to the system. Its format can be .png or .jpeg The face recognition performs face detection by cropping the image around the face and extracting only the face to be recognized from the entire image using bounding boxes. We resize the pixels of the extracted image to the model size which is 160*160 in our case. This process is labelled as face alignment and standardisation. We use a prebuilt keras model for face recognition built on the facenet framework using the keras api available as an h5 file. We train the this model on the train dataset that has images belonging to 5 different classes/people.It converts each face into an embedding which means that we extract high-quality features from each face. and produce a 128 dimensional vector representation of the same. This vector is normalized and the vector size can be changed from 128 to 1024. Faces with similar face embeddings have vectors that are closer to each other. \ We are using Linear SVM as the classifier model. The face embeddings that are similar to each other are clustered together and the model predicts the right class that the face belongs to. For emotion detection the model requires images to be of 48x48 pixel and a grayscale image. So we did some data preprocessing like image resizing, realignment etc. agian on our input image so that it can be used in our emotion detection model. We then predict the emotions that are depicted in the image.
 
